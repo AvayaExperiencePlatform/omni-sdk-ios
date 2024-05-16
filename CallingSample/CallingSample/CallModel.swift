@@ -84,18 +84,11 @@ class CallModel: ObservableObject, CallDelegate {
         let tokenProvider = TokenProvider(api: api)
         self.tokenProvider = tokenProvider
 
-        let axpURLString = "https://\(sdkConfig.axpHostName)"
-        guard let axpURL = URL(string: axpURLString) else {
-          errorMessage = "Invalid AXP server URL: \(axpURLString)"
-          isCalling = false
-          return
-        }
-
-        AXPSDK.configure(
+        AXPClientSDK.configureSDK(
           applicationKey: sdkConfig.appKey,
           integrationID: sdkConfig.axpIntegrationId,
           tokenProvider: tokenProvider,
-          hostURL: axpURL,
+          host: "https://\(sdkConfig.axpHostName)",
           displayName: "Calling Sample App User"
         )
       }
