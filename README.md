@@ -8,7 +8,7 @@
 
 Before you start integrating your iOS application with the Avaya Experience Platform™ (AXP) iOS Omni SDK, you need to make sure that you have the required information, like the `integrationId`, `appKey`, and `region`. The Avaya Experience Platform™ account administrator should be able to provide you with these details.
 
-Your backend application server additionally needs changes to be able to acquire JWT tokens for your iOS application. Refer to [this guide](https://developers.avayacloud.com/avaya-experience-platform/docs/overview#provisioning-an-integration) for a detailed description about this.
+Your backend application server additionally needs changes to be able to acquire JWT tokens for your iOS application. Refer to [this guide](https://developers.avayacloud.com/avaya-experience-platform/docs/omni-sdk-introduction) for a detailed description about this.
 
 ## Getting Started
 
