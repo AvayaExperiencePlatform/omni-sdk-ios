@@ -19,12 +19,8 @@ The Avaya Experience Platform™ iOS Omni SDK consist of four modules:
 - [AXP Messaging](https://avayaexperienceplatform.github.io/omni-sdk-ios/documentation/axpmessaging/)
 - [AXP Messaging UI](https://avayaexperienceplatform.github.io/omni-sdk-ios/documentation/axpmessagingui/)
 
-Start with the [AXP Core](./core.md) module to initialize the SDK and establish a session with AXP. The easiest and fastest way to enable your application with AXP Messaging capabilities is to use the built-in [AXP Messaging UI](./messaging-ui.md). In case your application needs to handle messaging events or you want to create your own Messaging UI, use the [AXP Messaging](./messaging.md) module.
+Start with the [AXP Core](https://avayaexperienceplatform.github.io/omni-sdk-ios/documentation/axpcore/) module to initialize the SDK and establish a session with AXP. The easiest and fastest way to enable your application with AXP Messaging capabilities is to use the built-in [AXP Messaging UI](https://avayaexperienceplatform.github.io/omni-sdk-ios/documentation/axpmessagingui/). In case your application needs to handle messaging events or you want to create your own Messaging UI, use the [AXP Messaging](https://avayaexperienceplatform.github.io/omni-sdk-ios/documentation/axpmessaging/) module.
 
 ## License
 
 View [LICENSE](./LICENSE)
-
-## Changelog
-
-View [CHANGELOG.md](./CHANGELOG.md)
