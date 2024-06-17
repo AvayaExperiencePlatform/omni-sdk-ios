@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct CallingSampleApp: App {
   init() {
-    AXPCalling.configureCallKit(
+    AXPCallingSDK.configureCallKit(
       iconTemplateImageData: UIImage(resource: .callKitIcon).pngData()
     )
   }

@@ -17,7 +17,7 @@ struct ContentView: View {
       NavigationView{
         ZStack {
           VStack {
-            !isMessagingDisabled ? AXPMessagingUI(conversation: dataModel.converstion!, config: config.configUI ?? AXPMessagingUIConfig()) {
+            !isMessagingDisabled ? AXPMessagingUIView(conversation: dataModel.converstion!, config: config.configUI ?? AXPMessagingUIConfig()) {
             } : nil
           }
           if isConnecting {

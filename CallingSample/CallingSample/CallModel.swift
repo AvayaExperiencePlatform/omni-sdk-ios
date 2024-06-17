@@ -106,7 +106,7 @@ class CallModel: ObservableObject, CallDelegate {
       remoteDisplayName: remoteDisplayName,
       remoteAddress: sdkConfig.callingRemoteAddress
     )
-    let call = AXPCalling.createCall(options: callOptions, delegate: self)
+    let call = AXPCallingSDK.createCall(options: callOptions, delegate: self)
     self.call = call
     isConnected = false
     isMicrophoneMuted = call.isMicrophoneMuted
