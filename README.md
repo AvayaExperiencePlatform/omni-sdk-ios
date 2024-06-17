@@ -14,12 +14,12 @@ Your backend application server additionally needs changes to be able to acquire
 
 The Avaya Experience Platform™ iOS Omni SDK consist of four modules:
 
-- [AXP Core](https://avayaexperienceplatform.github.io/omni-sdk-ios/documentation/axpcore/)
-- [AXP Calling](https://avayaexperienceplatform.github.io/omni-sdk-ios/documentation/axpcalling/)
-- [AXP Messaging](https://avayaexperienceplatform.github.io/omni-sdk-ios/documentation/axpmessaging/)
-- [AXP Messaging UI](https://avayaexperienceplatform.github.io/omni-sdk-ios/documentation/axpmessagingui/)
+- [AXPCore](https://avayaexperienceplatform.github.io/omni-sdk-ios/documentation/axpcore/)
+- [AXPCalling](https://avayaexperienceplatform.github.io/omni-sdk-ios/documentation/axpcalling/)
+- [AXPMessaging](https://avayaexperienceplatform.github.io/omni-sdk-ios/documentation/axpmessaging/)
+- [AXPMessagingUI](https://avayaexperienceplatform.github.io/omni-sdk-ios/documentation/axpmessagingui/)
 
-Start with the [AXP Core](https://avayaexperienceplatform.github.io/omni-sdk-ios/documentation/axpcore/) module to initialize the SDK and establish a session with AXP. The easiest and fastest way to enable your application with AXP Messaging capabilities is to use the built-in [AXP Messaging UI](https://avayaexperienceplatform.github.io/omni-sdk-ios/documentation/axpmessagingui/). In case your application needs to handle messaging events or you want to create your own Messaging UI, use the [AXP Messaging](https://avayaexperienceplatform.github.io/omni-sdk-ios/documentation/axpmessaging/) module.
+Start with the [AXPCore](https://avayaexperienceplatform.github.io/omni-sdk-ios/documentation/axpcore/) module to initialize the SDK and establish a session with AXP. The easiest and fastest way to enable your application with AXP Messaging capabilities is to use the built-in [AXPMessagingUI](https://avayaexperienceplatform.github.io/omni-sdk-ios/documentation/axpmessagingui/). In case your application needs to handle messaging events or you want to create your own Messaging UI, use the [AXPMessaging](https://avayaexperienceplatform.github.io/omni-sdk-ios/documentation/axpmessaging/) module.
 
 ## License
 
