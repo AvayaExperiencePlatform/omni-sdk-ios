@@ -18,7 +18,6 @@
 		FE63555A2B23782400A341A5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE6355592B23782400A341A5 /* Preview Assets.xcassets */; };
 		FE6355612B2378D500A341A5 /* ActiveCallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6355602B2378D500A341A5 /* ActiveCallView.swift */; };
 		FE6355682B237BEB00A341A5 /* AXPCore in Frameworks */ = {isa = PBXBuildFile; productRef = FE6355672B237BEB00A341A5 /* AXPCore */; };
-		FE63556A2B237BEB00A341A5 /* AXPMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = FE6355692B237BEB00A341A5 /* AXPMessaging */; };
 		FE63556C2B237BEB00A341A5 /* AXPCalling in Frameworks */ = {isa = PBXBuildFile; productRef = FE63556B2B237BEB00A341A5 /* AXPCalling */; };
 		FE6355762B23BFD200A341A5 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6355752B23BFD200A341A5 /* TimerView.swift */; };
 		FEF12F6B2B585B49004C2788 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF12F6A2B585B49004C2788 /* SettingsView.swift */; };
@@ -50,7 +49,6 @@
 			files = (
 				FE63556C2B237BEB00A341A5 /* AXPCalling in Frameworks */,
 				FE6355682B237BEB00A341A5 /* AXPCore in Frameworks */,
-				FE63556A2B237BEB00A341A5 /* AXPMessaging in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,7 +118,6 @@
 			name = CallingSample;
 			packageProductDependencies = (
 				FE6355672B237BEB00A341A5 /* AXPCore */,
-				FE6355692B237BEB00A341A5 /* AXPMessaging */,
 				FE63556B2B237BEB00A341A5 /* AXPCalling */,
 			);
 			productName = CallingSample;
@@ -416,10 +413,6 @@
 		FE6355672B237BEB00A341A5 /* AXPCore */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = AXPCore;
-		};
-		FE6355692B237BEB00A341A5 /* AXPMessaging */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = AXPMessaging;
 		};
 		FE63556B2B237BEB00A341A5 /* AXPCalling */ = {
 			isa = XCSwiftPackageProductDependency;
