@@ -1,3 +1,10 @@
+## 0.1.2
+
+Released July 12, 2024
+
+* Enabled Push notification in AXPMessaging SDK.
+
+
 ## 0.1.1
 
 Released June 17, 2024
