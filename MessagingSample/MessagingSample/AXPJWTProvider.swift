@@ -1,39 +1,40 @@
 import AXPCore
-import AXPMessaging
 import Foundation
 import OSLog
 
-
-class AXPJWTProvider : AXPTokenProvider {
+public class AXPJWTProvider: AXPTokenProvider {
   
   private var logger = Logger.messagingSampleApp
+  private let userDefaults = UserDefaults.appGroup
   
-  func fetchToken(completion: @escaping (Result<String, Error>) -> Void) {
-    fetchTokenFromAppServer { result in
-      switch result {
-      case .success(let tokenResponse):
-        completion(.success( tokenResponse.jwtToken ))
-        break
-      case .failure(let error):
-        completion(.failure(error))
-        break
+  public func fetchToken(completion: @escaping (Result<String, any Error>) -> Void) {
+    Task {
+      let tokenResponse = await fetchTokenFromAppServerAsync()
+      switch tokenResponse {
+      case .success(let token):
+        completion(.success(token.jwtToken))
+      case .failure(let failure):
+        completion(.failure(failure))
       }
     }
   }
   
   
   func fetchTokenFromAppServerAsync() async -> (Result<TokenResponse, AXPError>) {
-    guard let backendServerURL = URL(string: AXPMessagingConfiguration().backendServerUrl)
-    else {
-      return .failure(.badRequest)
-    }
-    var request = URLRequest(url: backendServerURL)
-    request.httpMethod = "POST"
-    request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+      guard let backendServer = URL(string: AXPMessagingConfiguration().backendServerUrl)
+      else {
+        return .failure(.badRequest)
+      }
+      var request = URLRequest(url: backendServer)
+      request.httpMethod = "POST"
+      request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+      
+      let userIdentifiersObject: [String: [String]] = ["emailAdresses": [AXPMessagingConfiguration().emailID]]
     
-    let userIdentifiersObject: [String: [String]] = ["emailAddresses": [AXPMessagingConfiguration().emailID]]
+    let body: [String: Any] = ["userId": AXPMessagingConfiguration().emailID,
+                               "verified": true,
+                               "userIdentifiers": userIdentifiersObject]
     
-    let body = ["userId" : AXPMessagingConfiguration().emailID, "verified" : true, "userIdentifiers" : userIdentifiersObject] as [String : Any]
     let jsonData = try! JSONSerialization.data(withJSONObject: body, options: [])
     request.httpBody = jsonData
     do {
@@ -44,27 +45,19 @@ class AXPJWTProvider : AXPTokenProvider {
       }
       let tokenResponse = try JSONDecoder().decode(TokenResponse.self, from: data)
       return .success(tokenResponse)
-    }
-    catch {
+    } catch {
       return .failure(.notAuthorized)
     }
-    
   }
   
-  
   func fetchTokenFromAppServer(completion: @escaping (Result<TokenResponse, AXPError>) -> Void) {
-    guard let backendServer = URL(string: AXPMessagingConfiguration().backendServerUrl)
-    else {
-      return completion(.failure(.badRequest))
-    }
-    var request = URLRequest(url: backendServer)
+    let emailId = AXPMessagingConfiguration().emailID
+    let backendServerURL = URL(string: AXPMessagingConfiguration().backendServerUrl)
+    var request = URLRequest(url: backendServerURL!)
     request.httpMethod = "POST"
     request.setValue("application/json", forHTTPHeaderField: "Content-Type")
     
-    let userIdentifiersObject: [String: [String]] = ["emailAdresses": [AXPMessagingConfiguration().emailID]]
-    
-    let body = ["userId" : AXPMessagingConfiguration().emailID, "verified" : true, "userIdentifiers" : userIdentifiersObject] as [String : Any]
-    
+    let body = ["userId": emailId]
     let jsonData = try! JSONSerialization.data(withJSONObject: body, options: [])
     request.httpBody = jsonData
     
@@ -75,6 +68,7 @@ class AXPJWTProvider : AXPTokenProvider {
         return
       }
       if let response = response as? HTTPURLResponse, response.statusCode != 200 {
+        self.logger.error("\(#function) Failed with status code: - \(response.statusCode)")
         completion(.failure(.notAuthorized))
         return
       }
@@ -93,14 +87,11 @@ class AXPJWTProvider : AXPTokenProvider {
   }
 }
 
-public struct TokenResponse : Decodable {
-  let appKey: String
+public struct TokenResponse: Codable {
   let axpIntegrationId: String
   let axpHostName: String
   let jwtToken: String
-}
-
-extension Logger {
-  static let messagingSampleApp = Logger(subsystem: Bundle.main.bundleIdentifier!, category: "messagingSample")
+  let appKey: String
+  let configId: String?
 }
 
