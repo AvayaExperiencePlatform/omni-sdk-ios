@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,7 @@
 		FE6355682B237BEB00A341A5 /* AXPCore in Frameworks */ = {isa = PBXBuildFile; productRef = FE6355672B237BEB00A341A5 /* AXPCore */; };
 		FE63556C2B237BEB00A341A5 /* AXPCalling in Frameworks */ = {isa = PBXBuildFile; productRef = FE63556B2B237BEB00A341A5 /* AXPCalling */; };
 		FE6355762B23BFD200A341A5 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6355752B23BFD200A341A5 /* TimerView.swift */; };
+		FE7E6C7A2BF65AC6007C69E9 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = FE7E6C792BF65AC6007C69E9 /* Localizable.xcstrings */; };
 		FEF12F6B2B585B49004C2788 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF12F6A2B585B49004C2788 /* SettingsView.swift */; };
 		FEF12F6D2B585B7C004C2788 /* SettingTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF12F6C2B585B7C004C2788 /* SettingTextView.swift */; };
 /* End PBXBuildFile section */
@@ -38,6 +39,7 @@
 		FE6355602B2378D500A341A5 /* ActiveCallView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveCallView.swift; sourceTree = "<group>"; };
 		FE6355752B23BFD200A341A5 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		FE6355792B276E9900A341A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FE7E6C792BF65AC6007C69E9 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		FEF12F6A2B585B49004C2788 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		FEF12F6C2B585B7C004C2788 /* SettingTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +89,7 @@
 				FE6355752B23BFD200A341A5 /* TimerView.swift */,
 				C9C4EEF42BAB3DBA00C19035 /* TokenProvider.swift */,
 				FE6355562B23782400A341A5 /* Assets.xcassets */,
+				FE7E6C782BF65A98007C69E9 /* Localization */,
 				FE6355582B23782400A341A5 /* Preview Content */,
 			);
 			path = CallingSample;
@@ -98,6 +101,14 @@
 				FE6355592B23782400A341A5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FE7E6C782BF65A98007C69E9 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				FE7E6C792BF65AC6007C69E9 /* Localizable.xcstrings */,
+			);
+			path = Localization;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +157,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
+				fr,
 			);
 			mainGroup = FE6355462B23782300A341A5;
 			packageReferences = (
@@ -167,6 +180,7 @@
 			files = (
 				FE63555A2B23782400A341A5 /* Preview Assets.xcassets in Resources */,
 				FE6355572B23782400A341A5 /* Assets.xcassets in Resources */,
+				FE7E6C7A2BF65AC6007C69E9 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,7 +352,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.avaya.axp.CallingSample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.avaya.axp.omni.CallingSample;
 				PRODUCT_NAME = "Calling Sample App";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -371,7 +385,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.avaya.axp.CallingSample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.avaya.axp.omni.CallingSample;
 				PRODUCT_NAME = "Calling Sample App";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

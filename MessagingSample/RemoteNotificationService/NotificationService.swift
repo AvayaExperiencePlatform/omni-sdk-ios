@@ -47,19 +47,16 @@ class NotificationService: UNNotificationServiceExtension {
     
     let tokenProvider = AXPJWTProvider()
     
-    let configuration = AXPSDKConfig(applicationKey: tokenResponse.appKey,
-                                     integrationID: tokenResponse.axpIntegrationId,
-                                     tokenProvider: tokenProvider,
-                                     host: "https://\(tokenResponse.axpHostName)",
-                                     displayName: dataModel.me.name,
-                                     sessionParameters: dataModel.sessionParameters,
-                                     pushNotificationConfigID: tokenResponse.configId)
-    
-    
-    
-    
-    
-    
+    let configuration = AXPOmniSDKConfig(
+      applicationKey: tokenResponse.appKey,
+      integrationID: tokenResponse.axpIntegrationId,
+      tokenProvider: tokenProvider,
+      host: "https://\(tokenResponse.axpHostName)",
+      displayName: dataModel.me.name,
+      sessionParameters: dataModel.sessionParameters,
+      pushNotificationConfigID: tokenResponse.configId
+    )
+
     localBestAttemptContent.title = "Messaging"
     
     Task {

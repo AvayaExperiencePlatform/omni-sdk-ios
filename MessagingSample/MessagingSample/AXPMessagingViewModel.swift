@@ -5,7 +5,7 @@ import AXPCore
 import AXPMessagingUI
 
 public enum FCMError: Error, CustomStringConvertible {
-    case tokenNotFound
+  case tokenNotFound
   
   public var description: String {
     switch self {
@@ -17,42 +17,42 @@ public enum FCMError: Error, CustomStringConvertible {
 
 class AXPMessagingSampleViewModel {
   
-  var configUI: AXPMessagingUIConfig?
+  var configUI: AXPMessagingUIViewConfig?
   var isAXPSDKConfigured = false
   
   private let keychainService = KeychainService(service: "com.avaya.messaging",
-                                                  accessGroup: "group.com.avaya.messaging")
+                                                accessGroup: "group.com.avaya.messaging")
   
   func setupAvayaUISdkConfig() {
-    configUI = AXPMessagingUIConfig(pageSize: AXPMessagingConfiguration().pageSize)
+    configUI = AXPMessagingUIViewConfig()
   }
-    
+  
   func connectToMessagingChat(dataModel: DataModel) async throws -> Bool {
     let result = await signIn(dataModel: dataModel)
     switch result {
     case .success(let configId):
       if isAXPSDKConfigured {
         do {
-            let defaultConversation = try await AXPClientSDK.getDefaultConversation()
-              
-            if !defaultConversation.sessionId.isEmpty {
-              
-              if let deviceTokenData = try? keychainService.retrieveData( forAccount: "FCMToken",
-                                                                          accessGroup: "group.com.avaya.messaging"),
-                 
-                  let deviceToken = String(data: deviceTokenData, encoding: .utf8),
-                 let configId = configId {
-                await saveDeviceRegistration(sessionId: defaultConversation.sessionId,
-                                             deviceToken: deviceToken,
-                                             configId: configId)
-              }
+          let defaultConversation = try await AXPOmniSDK.getDefaultConversation()
+
+          if !defaultConversation.sessionId.isEmpty {
+            
+            if let deviceTokenData = try? keychainService.retrieveData( forAccount: "FCMToken",
+                                                                        accessGroup: "group.com.avaya.messaging"),
+               
+                let deviceToken = String(data: deviceTokenData, encoding: .utf8),
+               let configId = configId {
+              await saveDeviceRegistration(sessionId: defaultConversation.sessionId,
+                                           deviceToken: deviceToken,
+                                           configId: configId)
             }
-            
-            defaultConversation.contextParameters = AXPMessagingConfiguration().engagementParameters
-            
-            dataModel.converstion = defaultConversation
-            return false
           }
+          
+          defaultConversation.contextParameters = AXPMessagingConfiguration().engagementParameters
+          
+          dataModel.converstion = defaultConversation
+          return false
+        }
         catch {
           throw error
         }
@@ -82,7 +82,7 @@ class AXPMessagingSampleViewModel {
                                       account: "com.avaya.messaging")
         
         
-        AXPClientSDK.configureSDK(applicationKey: tokenResponse.appKey,
+        AXPOmniSDK.configureSDK(applicationKey: tokenResponse.appKey,
                                   integrationID: tokenResponse.axpIntegrationId,
                                   tokenProvider: messagingProvider,
                                   host: "https://\(tokenResponse.axpHostName)",
@@ -96,7 +96,5 @@ class AXPMessagingSampleViewModel {
       case .failure(_):
         return .failure(.notAuthorized)
       }
-    }
+  }
 }
-
-
