@@ -4,9 +4,6 @@ import OSLog
 
 public class AXPJWTProvider: AXPTokenProvider {
   
-  private var logger = Logger.messagingSampleApp
-  private let userDefaults = UserDefaults.appGroup
-  
   public func fetchToken(completion: @escaping (Result<String, any Error>) -> Void) {
     Task {
       let tokenResponse = await fetchTokenFromAppServerAsync()
@@ -19,6 +16,8 @@ public class AXPJWTProvider: AXPTokenProvider {
     }
   }
   
+  private var logger = Logger.messagingSampleApp
+  private let userDefaults = UserDefaults.appGroup
   
   func fetchTokenFromAppServerAsync() async -> (Result<TokenResponse, AXPError>) {
       guard let backendServer = URL(string: AXPMessagingConfiguration().backendServerUrl)
@@ -94,4 +93,3 @@ public struct TokenResponse: Codable {
   let appKey: String
   let configId: String?
 }
-

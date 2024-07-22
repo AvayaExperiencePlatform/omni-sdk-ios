@@ -84,7 +84,7 @@ class CallModel: ObservableObject, CallDelegate {
         let tokenProvider = TokenProvider(api: api)
         self.tokenProvider = tokenProvider
 
-        AXPClientSDK.configureSDK(
+        AXPOmniSDK.configureSDK(
           applicationKey: sdkConfig.appKey,
           integrationID: sdkConfig.axpIntegrationId,
           tokenProvider: tokenProvider,
