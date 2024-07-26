@@ -31,7 +31,7 @@
 		B9CCD8582C36F44000711EE0 /* KeychainServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A233792C36EE7B001FF780 /* KeychainServices.swift */; };
 		B9CCD85A2C36F4C000711EE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CCD8592C36F4C000711EE0 /* AppDelegate.swift */; };
 		B9CCD85D2C36F59A00711EE0 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = B9CCD85C2C36F59A00711EE0 /* FirebaseMessaging */; };
-		C30CCE3A2C5231B900098FA7 /* README.docc in Sources */ = {isa = PBXBuildFile; fileRef = C30CCE392C5231B900098FA7 /* README.docc */; };
+		C3CE0A862C5363D100204B9F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C3CE0A852C5363D100204B9F /* README.md */; };
 		C91A6D0F2C4EC19F00125128 /* AXPMessagingUI in Frameworks */ = {isa = PBXBuildFile; productRef = C91A6D0E2C4EC19F00125128 /* AXPMessagingUI */; };
 		C91A6D112C4EC1AC00125128 /* AXPCore in Frameworks */ = {isa = PBXBuildFile; productRef = C91A6D102C4EC1AC00125128 /* AXPCore */; };
 		C91A6D132C4EC1AC00125128 /* AXPMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = C91A6D122C4EC1AC00125128 /* AXPMessaging */; };
@@ -83,7 +83,7 @@
 		B9A233762C36EC68001FF780 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		B9A233792C36EE7B001FF780 /* KeychainServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainServices.swift; sourceTree = "<group>"; };
 		B9CCD8592C36F4C000711EE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C30CCE392C5231B900098FA7 /* README.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = README.docc; sourceTree = "<group>"; };
+		C3CE0A852C5363D100204B9F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +131,7 @@
 		B9158CAB2BF0F51300C2B3D2 /* MessagingSample */ = {
 			isa = PBXGroup;
 			children = (
+				C3CE0A852C5363D100204B9F /* README.md */,
 				B9A233702C36EAE0001FF780 /* MessagingSample.entitlements */,
 				B9158CDC2BF0F6CC00C2B3D2 /* AXPJWTProvider.swift */,
 				B9158CAC2BF0F51300C2B3D2 /* MessagingSampleApp.swift */,
@@ -145,7 +146,6 @@
 				B9A233762C36EC68001FF780 /* Logger.swift */,
 				B9A233792C36EE7B001FF780 /* KeychainServices.swift */,
 				B9CCD8592C36F4C000711EE0 /* AppDelegate.swift */,
-				C30CCE392C5231B900098FA7 /* README.docc */,
 			);
 			path = MessagingSample;
 			sourceTree = "<group>";
@@ -260,6 +260,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3CE0A862C5363D100204B9F /* README.md in Resources */,
 				B9158CB42BF0F51600C2B3D2 /* Preview Assets.xcassets in Resources */,
 				B9158CB12BF0F51600C2B3D2 /* Assets.xcassets in Resources */,
 			);
@@ -288,7 +289,6 @@
 				B9A233772C36EC68001FF780 /* Logger.swift in Sources */,
 				B9158CAD2BF0F51300C2B3D2 /* MessagingSampleApp.swift in Sources */,
 				B9158CED2BF164C200C2B3D2 /* UserModel.swift in Sources */,
-				C30CCE3A2C5231B900098FA7 /* README.docc in Sources */,
 				B9A2337A2C36EE7B001FF780 /* KeychainServices.swift in Sources */,
 				B9158CD82BF0F5E400C2B3D2 /* MessagingSDKConfig.swift in Sources */,
 				B9158CEF2BF1653600C2B3D2 /* AXPMessagingViewModel.swift in Sources */,

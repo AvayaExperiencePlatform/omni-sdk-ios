@@ -16,4 +16,3 @@ In MessagingSDKConfig file, update the following values:
 
 ## Running the App
 After making these changes, you're ready to run the app.
-
