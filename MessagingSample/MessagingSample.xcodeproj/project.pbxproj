@@ -7,36 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8200841D2C58129600FFB9E9 /* AppBackendAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8200841A2C58129600FFB9E9 /* AppBackendAPI.swift */; };
+		8200841E2C58129600FFB9E9 /* TokenProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8200841B2C58129600FFB9E9 /* TokenProvider.swift */; };
+		820084222C58129F00FFB9E9 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8200841F2C58129F00FFB9E9 /* SettingsView.swift */; };
+		820084232C58129F00FFB9E9 /* SettingTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820084202C58129F00FFB9E9 /* SettingTextView.swift */; };
+		8200842C2C58185900FFB9E9 /* AppBackendAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8200841A2C58129600FFB9E9 /* AppBackendAPI.swift */; };
+		820084312C58194D00FFB9E9 /* SettingsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820084302C58194D00FFB9E9 /* SettingsData.swift */; };
+		820084392C581BD800FFB9E9 /* TokenProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8200841B2C58129600FFB9E9 /* TokenProvider.swift */; };
+		822EA2D82C5D9774007F5411 /* SettingsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822EA2D72C5D9774007F5411 /* SettingsConstants.swift */; };
+		822EA2DE2C5D9825007F5411 /* SettingsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822EA2D72C5D9774007F5411 /* SettingsConstants.swift */; };
+		8279EE562C5B01B300AD1899 /* SettingsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820084302C58194D00FFB9E9 /* SettingsData.swift */; };
 		B9158CAD2BF0F51300C2B3D2 /* MessagingSampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9158CAC2BF0F51300C2B3D2 /* MessagingSampleApp.swift */; };
 		B9158CAF2BF0F51300C2B3D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9158CAE2BF0F51300C2B3D2 /* ContentView.swift */; };
 		B9158CB12BF0F51600C2B3D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9158CB02BF0F51600C2B3D2 /* Assets.xcassets */; };
 		B9158CB42BF0F51600C2B3D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9158CB32BF0F51600C2B3D2 /* Preview Assets.xcassets */; };
-		B9158CD82BF0F5E400C2B3D2 /* MessagingSDKConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9158CD72BF0F5E300C2B3D2 /* MessagingSDKConfig.swift */; };
-		B9158CE02BF0F6CC00C2B3D2 /* AXPJWTProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9158CDC2BF0F6CC00C2B3D2 /* AXPJWTProvider.swift */; };
+		B9158CD82BF0F5E400C2B3D2 /* AXPMessagingConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9158CD72BF0F5E300C2B3D2 /* AXPMessagingConfiguration.swift */; };
 		B9158CEB2BF1648C00C2B3D2 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9158CEA2BF1648C00C2B3D2 /* DataModel.swift */; };
 		B9158CED2BF164C200C2B3D2 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9158CEC2BF164C200C2B3D2 /* UserModel.swift */; };
 		B9158CEF2BF1653600C2B3D2 /* AXPMessagingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9158CEE2BF1653600C2B3D2 /* AXPMessagingViewModel.swift */; };
 		B9A2335F2C36E9C8001FF780 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A2335E2C36E9C8001FF780 /* NotificationService.swift */; };
 		B9A233642C36E9C8001FF780 /* RemoteNotificationService.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B9A2335C2C36E9C8001FF780 /* RemoteNotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B9A233712C36EBAF001FF780 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9158CEA2BF1648C00C2B3D2 /* DataModel.swift */; };
-		B9A233732C36EBF4001FF780 /* CommonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A233722C36EBF4001FF780 /* CommonFunctions.swift */; };
-		B9A233742C36EBFB001FF780 /* CommonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A233722C36EBF4001FF780 /* CommonFunctions.swift */; };
-		B9A233752C36EC12001FF780 /* AXPJWTProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9158CDC2BF0F6CC00C2B3D2 /* AXPJWTProvider.swift */; };
+		B9A233732C36EBF4001FF780 /* NotificationRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A233722C36EBF4001FF780 /* NotificationRegistration.swift */; };
+		B9A233742C36EBFB001FF780 /* NotificationRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A233722C36EBF4001FF780 /* NotificationRegistration.swift */; };
 		B9A233772C36EC68001FF780 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A233762C36EC68001FF780 /* Logger.swift */; };
 		B9A233782C36EC70001FF780 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A233762C36EC68001FF780 /* Logger.swift */; };
 		B9A2337A2C36EE7B001FF780 /* KeychainServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A233792C36EE7B001FF780 /* KeychainServices.swift */; };
 		B9CCD8552C36F32000711EE0 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9158CEC2BF164C200C2B3D2 /* UserModel.swift */; };
-		B9CCD8562C36F32A00711EE0 /* MessagingSDKConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9158CD72BF0F5E300C2B3D2 /* MessagingSDKConfig.swift */; };
+		B9CCD8562C36F32A00711EE0 /* AXPMessagingConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9158CD72BF0F5E300C2B3D2 /* AXPMessagingConfiguration.swift */; };
 		B9CCD8572C36F33900711EE0 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A2335E2C36E9C8001FF780 /* NotificationService.swift */; };
 		B9CCD8582C36F44000711EE0 /* KeychainServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A233792C36EE7B001FF780 /* KeychainServices.swift */; };
 		B9CCD85A2C36F4C000711EE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CCD8592C36F4C000711EE0 /* AppDelegate.swift */; };
 		B9CCD85D2C36F59A00711EE0 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = B9CCD85C2C36F59A00711EE0 /* FirebaseMessaging */; };
-		C3CE0A862C5363D100204B9F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C3CE0A852C5363D100204B9F /* README.md */; };
 		C91A6D0F2C4EC19F00125128 /* AXPMessagingUI in Frameworks */ = {isa = PBXBuildFile; productRef = C91A6D0E2C4EC19F00125128 /* AXPMessagingUI */; };
 		C91A6D112C4EC1AC00125128 /* AXPCore in Frameworks */ = {isa = PBXBuildFile; productRef = C91A6D102C4EC1AC00125128 /* AXPCore */; };
 		C91A6D132C4EC1AC00125128 /* AXPMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = C91A6D122C4EC1AC00125128 /* AXPMessaging */; };
 		C91A6D152C4EC1DE00125128 /* AXPMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = C91A6D142C4EC1DE00125128 /* AXPMessaging */; };
 		C91A6D172C4EC1E500125128 /* AXPCore in Frameworks */ = {isa = PBXBuildFile; productRef = C91A6D162C4EC1E500125128 /* AXPCore */; };
+		FE145EF92C6E7ABC00A809F5 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE145EF82C6E7ABC00A809F5 /* AppConstants.swift */; };
+		FE145EFA2C6E7ABC00A809F5 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE145EF82C6E7ABC00A809F5 /* AppConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,26 +73,33 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8200841A2C58129600FFB9E9 /* AppBackendAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppBackendAPI.swift; sourceTree = "<group>"; };
+		8200841B2C58129600FFB9E9 /* TokenProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenProvider.swift; sourceTree = "<group>"; };
+		8200841F2C58129F00FFB9E9 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		820084202C58129F00FFB9E9 /* SettingTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTextView.swift; sourceTree = "<group>"; };
+		820084302C58194D00FFB9E9 /* SettingsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsData.swift; sourceTree = "<group>"; };
+		822EA2D72C5D9774007F5411 /* SettingsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsConstants.swift; sourceTree = "<group>"; };
+		82CE17022C598E27008C3560 /* APNSSimulatorTest.apns */ = {isa = PBXFileReference; lastKnownFileType = text; name = APNSSimulatorTest.apns; path = ../../SampleAppCommon/Messaging/RemoteNotificationService/APNSSimulatorTest.apns; sourceTree = "<group>"; };
 		B9158CA92BF0F51300C2B3D2 /* MessagingSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessagingSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9158CAC2BF0F51300C2B3D2 /* MessagingSampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagingSampleApp.swift; sourceTree = "<group>"; };
 		B9158CAE2BF0F51300C2B3D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B9158CB02BF0F51600C2B3D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9158CB32BF0F51600C2B3D2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		B9158CD72BF0F5E300C2B3D2 /* MessagingSDKConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagingSDKConfig.swift; sourceTree = "<group>"; };
-		B9158CDC2BF0F6CC00C2B3D2 /* AXPJWTProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AXPJWTProvider.swift; sourceTree = "<group>"; };
+		B9158CD72BF0F5E300C2B3D2 /* AXPMessagingConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AXPMessagingConfiguration.swift; sourceTree = "<group>"; };
 		B9158CEA2BF1648C00C2B3D2 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		B9158CEC2BF164C200C2B3D2 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		B9158CEE2BF1653600C2B3D2 /* AXPMessagingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AXPMessagingViewModel.swift; sourceTree = "<group>"; };
 		B9A2335C2C36E9C8001FF780 /* RemoteNotificationService.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RemoteNotificationService.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		B9A2335E2C36E9C8001FF780 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		B9A2335E2C36E9C8001FF780 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotificationService.swift; path = ../../SampleAppCommon/Messaging/RemoteNotificationService/NotificationService.swift; sourceTree = "<group>"; };
 		B9A233602C36E9C8001FF780 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9A2336F2C36EA29001FF780 /* RemoteNotificationService.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RemoteNotificationService.entitlements; sourceTree = "<group>"; };
 		B9A233702C36EAE0001FF780 /* MessagingSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MessagingSample.entitlements; sourceTree = "<group>"; };
-		B9A233722C36EBF4001FF780 /* CommonFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFunctions.swift; sourceTree = "<group>"; };
+		B9A233722C36EBF4001FF780 /* NotificationRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotificationRegistration.swift; path = ../../SampleAppCommon/Messaging/NotificationRegistration.swift; sourceTree = "<group>"; };
 		B9A233762C36EC68001FF780 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
-		B9A233792C36EE7B001FF780 /* KeychainServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainServices.swift; sourceTree = "<group>"; };
-		B9CCD8592C36F4C000711EE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C3CE0A852C5363D100204B9F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B9A233792C36EE7B001FF780 /* KeychainServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KeychainServices.swift; path = ../../SampleAppCommon/Messaging/KeychainServices.swift; sourceTree = "<group>"; };
+		B9CCD8592C36F4C000711EE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../SampleAppCommon/Messaging/AppDelegate.swift; sourceTree = "<group>"; };
+		FE145EF82C6E7ABC00A809F5 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		FE52ABEA2C6A5F2200EB7979 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +126,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8200841C2C58129600FFB9E9 /* Backend */ = {
+			isa = PBXGroup;
+			children = (
+				8200841A2C58129600FFB9E9 /* AppBackendAPI.swift */,
+				8200841B2C58129600FFB9E9 /* TokenProvider.swift */,
+			);
+			name = Backend;
+			path = ../../SampleAppCommon/Backend;
+			sourceTree = "<group>";
+		};
+		820084212C58129F00FFB9E9 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				8200841F2C58129F00FFB9E9 /* SettingsView.swift */,
+				820084202C58129F00FFB9E9 /* SettingTextView.swift */,
+				820084302C58194D00FFB9E9 /* SettingsData.swift */,
+				822EA2D72C5D9774007F5411 /* SettingsConstants.swift */,
+			);
+			name = Settings;
+			path = ../../SampleAppCommon/Settings;
+			sourceTree = "<group>";
+		};
 		B9158CA02BF0F51300C2B3D2 = {
 			isa = PBXGroup;
 			children = (
@@ -117,7 +155,10 @@
 				B9A2335D2C36E9C8001FF780 /* RemoteNotificationService */,
 				B9158CAA2BF0F51300C2B3D2 /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
+			usesTabs = 0;
 		};
 		B9158CAA2BF0F51300C2B3D2 /* Products */ = {
 			isa = PBXGroup;
@@ -131,9 +172,10 @@
 		B9158CAB2BF0F51300C2B3D2 /* MessagingSample */ = {
 			isa = PBXGroup;
 			children = (
-				C3CE0A852C5363D100204B9F /* README.md */,
+				FE52ABEA2C6A5F2200EB7979 /* Info.plist */,
+				8200841C2C58129600FFB9E9 /* Backend */,
+				820084212C58129F00FFB9E9 /* Settings */,
 				B9A233702C36EAE0001FF780 /* MessagingSample.entitlements */,
-				B9158CDC2BF0F6CC00C2B3D2 /* AXPJWTProvider.swift */,
 				B9158CAC2BF0F51300C2B3D2 /* MessagingSampleApp.swift */,
 				B9158CEE2BF1653600C2B3D2 /* AXPMessagingViewModel.swift */,
 				B9158CEA2BF1648C00C2B3D2 /* DataModel.swift */,
@@ -141,11 +183,12 @@
 				B9158CAE2BF0F51300C2B3D2 /* ContentView.swift */,
 				B9158CB02BF0F51600C2B3D2 /* Assets.xcassets */,
 				B9158CB22BF0F51600C2B3D2 /* Preview Content */,
-				B9158CD72BF0F5E300C2B3D2 /* MessagingSDKConfig.swift */,
-				B9A233722C36EBF4001FF780 /* CommonFunctions.swift */,
+				B9158CD72BF0F5E300C2B3D2 /* AXPMessagingConfiguration.swift */,
+				B9A233722C36EBF4001FF780 /* NotificationRegistration.swift */,
 				B9A233762C36EC68001FF780 /* Logger.swift */,
 				B9A233792C36EE7B001FF780 /* KeychainServices.swift */,
 				B9CCD8592C36F4C000711EE0 /* AppDelegate.swift */,
+				FE145EF82C6E7ABC00A809F5 /* AppConstants.swift */,
 			);
 			path = MessagingSample;
 			sourceTree = "<group>";
@@ -162,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				B9A2336F2C36EA29001FF780 /* RemoteNotificationService.entitlements */,
+				82CE17022C598E27008C3560 /* APNSSimulatorTest.apns */,
 				B9A2335E2C36E9C8001FF780 /* NotificationService.swift */,
 				B9A233602C36E9C8001FF780 /* Info.plist */,
 			);
@@ -260,7 +304,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3CE0A862C5363D100204B9F /* README.md in Resources */,
 				B9158CB42BF0F51600C2B3D2 /* Preview Assets.xcassets in Resources */,
 				B9158CB12BF0F51600C2B3D2 /* Assets.xcassets in Resources */,
 			);
@@ -280,17 +323,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				820084312C58194D00FFB9E9 /* SettingsData.swift in Sources */,
+				FE145EF92C6E7ABC00A809F5 /* AppConstants.swift in Sources */,
+				820084222C58129F00FFB9E9 /* SettingsView.swift in Sources */,
 				B9158CEB2BF1648C00C2B3D2 /* DataModel.swift in Sources */,
 				B9CCD8572C36F33900711EE0 /* NotificationService.swift in Sources */,
-				B9158CE02BF0F6CC00C2B3D2 /* AXPJWTProvider.swift in Sources */,
-				B9A233732C36EBF4001FF780 /* CommonFunctions.swift in Sources */,
+				8200841D2C58129600FFB9E9 /* AppBackendAPI.swift in Sources */,
+				B9A233732C36EBF4001FF780 /* NotificationRegistration.swift in Sources */,
 				B9CCD85A2C36F4C000711EE0 /* AppDelegate.swift in Sources */,
+				822EA2D82C5D9774007F5411 /* SettingsConstants.swift in Sources */,
 				B9158CAF2BF0F51300C2B3D2 /* ContentView.swift in Sources */,
 				B9A233772C36EC68001FF780 /* Logger.swift in Sources */,
 				B9158CAD2BF0F51300C2B3D2 /* MessagingSampleApp.swift in Sources */,
 				B9158CED2BF164C200C2B3D2 /* UserModel.swift in Sources */,
 				B9A2337A2C36EE7B001FF780 /* KeychainServices.swift in Sources */,
-				B9158CD82BF0F5E400C2B3D2 /* MessagingSDKConfig.swift in Sources */,
+				B9158CD82BF0F5E400C2B3D2 /* AXPMessagingConfiguration.swift in Sources */,
+				8200841E2C58129600FFB9E9 /* TokenProvider.swift in Sources */,
+				820084232C58129F00FFB9E9 /* SettingTextView.swift in Sources */,
 				B9158CEF2BF1653600C2B3D2 /* AXPMessagingViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,12 +350,16 @@
 			files = (
 				B9A233782C36EC70001FF780 /* Logger.swift in Sources */,
 				B9CCD8582C36F44000711EE0 /* KeychainServices.swift in Sources */,
-				B9A233752C36EC12001FF780 /* AXPJWTProvider.swift in Sources */,
-				B9A233742C36EBFB001FF780 /* CommonFunctions.swift in Sources */,
-				B9CCD8562C36F32A00711EE0 /* MessagingSDKConfig.swift in Sources */,
+				8279EE562C5B01B300AD1899 /* SettingsData.swift in Sources */,
+				820084392C581BD800FFB9E9 /* TokenProvider.swift in Sources */,
+				B9A233742C36EBFB001FF780 /* NotificationRegistration.swift in Sources */,
+				B9CCD8562C36F32A00711EE0 /* AXPMessagingConfiguration.swift in Sources */,
 				B9A2335F2C36E9C8001FF780 /* NotificationService.swift in Sources */,
+				FE145EFA2C6E7ABC00A809F5 /* AppConstants.swift in Sources */,
 				B9CCD8552C36F32000711EE0 /* UserModel.swift in Sources */,
+				8200842C2C58185900FFB9E9 /* AppBackendAPI.swift in Sources */,
 				B9A233712C36EBAF001FF780 /* DataModel.swift in Sources */,
+				822EA2DE2C5D9825007F5411 /* SettingsConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +507,8 @@
 				DEVELOPMENT_TEAM = AYQ98BC3EV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MessagingSample/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs access to the camera to take photos and share with agent.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -487,6 +542,8 @@
 				DEVELOPMENT_TEAM = AYQ98BC3EV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MessagingSample/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs access to the camera to take photos and share with agent.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -517,7 +574,7 @@
 				INFOPLIST_FILE = RemoteNotificationService/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = RemoteNotificationService;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -544,7 +601,7 @@
 				INFOPLIST_FILE = RemoteNotificationService/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = RemoteNotificationService;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

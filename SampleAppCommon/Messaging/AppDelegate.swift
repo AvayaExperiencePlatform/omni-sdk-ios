@@ -11,17 +11,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-    FirebaseApp.configure()
+    // To test push notifications, add a GoogleService-Info.plist for your
+    // Firebase project and uncomment the code below.
+
+    /*FirebaseApp.configure()
 
     // Register for remote notifications
     UNUserNotificationCenter.current().delegate = self
     UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
       self.logger.debug("Permission granted: \(granted)")
+      
+      if granted {
+        DispatchQueue.main.async {
+          self.logger.debug("application.registerForRemoteNotifications");
+          UIApplication.shared.registerForRemoteNotifications()
+        }
+      }
     }
-    
     application.registerForRemoteNotifications()
-
-    Messaging.messaging().delegate = self
+    Messaging.messaging().delegate = self*/
 
     return true
   }
@@ -46,22 +54,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
   func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
     logger.debug("Firebase registration token: \(String(describing: fcmToken))")
     
-    let keychainService = KeychainService(service: "com.avaya.messaging",
-                                          accessGroup: "group.com.avaya.messaging")
+    let keychainService = KeychainService(service: keychainServiceName,
+                                          accessGroup: groupName)
     
     if let fcmToken = fcmToken, let tokenData = fcmToken.data(using: .utf8) {
       do {
         try keychainService.setData(tokenData,
                                     accessibility: .whenUnlocked,
-                                    forService: "com.avaya.messaging",
+                                    forService: keychainServiceName,
                                     account: "FCMToken")
       } catch {
         logger.debug("Failed to set FCM token in keychain: \(error)")
       }
     }
   }
-
-  func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+  
+  func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data
+  ) {
+    logger.debug("didRegisterForRemoteNotificationsWithDeviceToken")
+    let token = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
+    logger.debug("APNS Device Token: \(token)")
     Messaging.messaging().apnsToken = deviceToken
   }
 

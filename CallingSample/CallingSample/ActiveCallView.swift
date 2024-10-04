@@ -6,7 +6,6 @@
 
 import AVKit
 import AXPCalling
-import CallKit
 import Foundation
 import SwiftUI
 
@@ -121,8 +120,10 @@ struct ActiveCallView: View {
             .buttonStyle(CallButtonStyle())
             Text("End").foregroundColor(.white).font(.subheadline)
           }
-        }.padding(.trailing, 0)
-      }.background(Color.black.edgesIgnoringSafeArea(.all))
+        }
+        .padding(.trailing, 0)
+      }
+      .background(Color.black.edgesIgnoringSafeArea(.all))
     }
   }
 }

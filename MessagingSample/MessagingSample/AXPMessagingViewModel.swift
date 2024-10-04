@@ -1,11 +1,10 @@
-
-
 import Foundation
 import AXPCore
 import AXPMessagingUI
+import OSLog
 
 public enum FCMError: Error, CustomStringConvertible {
-  case tokenNotFound
+    case tokenNotFound
   
   public var description: String {
     switch self {
@@ -20,11 +19,17 @@ class AXPMessagingSampleViewModel {
   var configUI: AXPMessagingUIViewConfig?
   var isAXPSDKConfigured = false
   
-  private let keychainService = KeychainService(service: "com.avaya.messaging",
-                                                accessGroup: "group.com.avaya.messaging")
+  var sdkConfig = SDKConfiguration()
+  var setupTask: Task<(SDKConfiguration, String), Error>?
+  var tokenProvider: TokenProvider?
+  
+  let logger = Logger()
+  
+  private let keychainService = KeychainService(service: keychainServiceName,
+                                                accessGroup: groupName)
   
   func setupAvayaUISdkConfig() {
-    configUI = AXPMessagingUIViewConfig()
+    configUI = AXPMessagingUIViewConfig(pageSize: AXPMessagingConfiguration().pageSize)
   }
   
   func connectToMessagingChat(dataModel: DataModel) async throws -> Bool {
@@ -34,11 +39,11 @@ class AXPMessagingSampleViewModel {
       if isAXPSDKConfigured {
         do {
           let defaultConversation = try await AXPOmniSDK.getDefaultConversation()
-
+          
           if !defaultConversation.sessionId.isEmpty {
             
             if let deviceTokenData = try? keychainService.retrieveData( forAccount: "FCMToken",
-                                                                        accessGroup: "group.com.avaya.messaging"),
+                                                                        accessGroup: groupName),
                
                 let deviceToken = String(data: deviceTokenData, encoding: .utf8),
                let configId = configId {
@@ -48,7 +53,7 @@ class AXPMessagingSampleViewModel {
             }
           }
           
-          defaultConversation.contextParameters = AXPMessagingConfiguration().engagementParameters
+          defaultConversation.contextParameters = SettingsData().contextParameters
           
           dataModel.converstion = defaultConversation
           return false
@@ -65,36 +70,58 @@ class AXPMessagingSampleViewModel {
     
   }
   
+  
   private func signIn(dataModel: DataModel) async -> Result<String?, AXPError> {
-      let messagingProvider = dataModel.jwtProvider
-      let result = await messagingProvider.fetchTokenFromAppServerAsync()
-      switch result {
-      case .success(let tokenResponse):
-        let tokenData = try? JSONEncoder().encode(tokenResponse)
-        guard let tokenData = tokenData else {
-          return .failure(AXPError.invalidData)
-        }
+    let baseURLString = UserDefaults.appGroup.string(forKey: UserDefaultConstants.appBackendServerURL) ?? defaultBackendServerURL
+    guard let baseURL = URL(string: baseURLString) else {
+      // errorMessage = "Invalid app backend URL: \(baseURLString)"
+      return .failure(AXPError.invalidData)
+    }
+    let api = AppBackendAPI(baseURL: baseURL)
+    logger.info("Fetching SDK configuration from \(baseURLString)")
+    
+    let fetchConfigurationTask = Task {
+      try await api.fetchConfiguration()
+    }
+    setupTask = fetchConfigurationTask
+    isAXPSDKConfigured = false
+    do {
+      let (config, token) = try await fetchConfigurationTask.value
+      if fetchConfigurationTask.isCancelled { return  .failure(AXPError.cancelled)}
+      if config != sdkConfig {
+        logger.info("Applying new SDK configuration")
+        sdkConfig = config
+        let tokenProvider = TokenProvider(api: api)
+        self.tokenProvider = tokenProvider
         
-         try? keychainService.setData(tokenData,
-                                      label: "com.avaya.messaging",
-                                      accessibility: .whenUnlocked,
-                                      forService: "com.avaya.messaging",
-                                      account: "com.avaya.messaging")
-        
-        
-        AXPOmniSDK.configureSDK(applicationKey: tokenResponse.appKey,
-                                  integrationID: tokenResponse.axpIntegrationId,
-                                  tokenProvider: messagingProvider,
-                                  host: "https://\(tokenResponse.axpHostName)",
-                                  displayName: dataModel.me.name,
-                                  sessionParameters: dataModel.sessionParameters,
-                                  pushNotificationConfigID: tokenResponse.configId)
-        
-        isAXPSDKConfigured = true
-        return .success(tokenResponse.configId)
-        
-      case .failure(_):
-        return .failure(.notAuthorized)
+        if let tokenData = try? JSONEncoder().encode(sdkConfig) {
+          try? keychainService.setData(tokenData,
+                                       label: keychainServiceName,
+                                       accessibility: .whenUnlocked,
+                                       forService: keychainServiceName,
+                                       account: keychainServiceName)
+        } else {
+          return .failure(AXPError.internalError)}
       }
+      
+      AXPOmniSDK.configureSDK(
+        applicationKey: sdkConfig.appKey,
+        integrationID: sdkConfig.axpIntegrationId,
+        tokenProvider: tokenProvider!,
+        host: "https://\(sdkConfig.axpHostName)",
+        displayName: SettingsData().yourDisplayName,
+        sessionParameters: AXPMessagingConfiguration().sessionParameters,
+        pushNotificationConfigID: sdkConfig.configId
+      )
+      isAXPSDKConfigured = true
+      tokenProvider?.nextToken = token
+      return .success(sdkConfig.configId)
+    } catch {
+      if fetchConfigurationTask.isCancelled { return .failure(AXPError.cancelled)}
+      isAXPSDKConfigured = false
+      return .failure(.notAuthorized)
+    }
   }
 }
+
+

@@ -1,6 +1,5 @@
 //
 //  KeypadView.swift
-//  CallingSample
 //
 //
 
@@ -110,12 +109,6 @@ struct KeypadButtonStyle: ButtonStyle {
       .padding(.all, 0)
       .scaleEffect(configuration.isPressed ? 1.2 : 1)
       .animation(.easeOut(duration: 0.2), value: configuration.isPressed)
-  }
-}
-
-struct KeypadView_Previews: PreviewProvider {
-  static var previews: some View {
-    KeypadView(isShowingKeypadView: .constant(true), viewModel: CallModel())
   }
 }
 

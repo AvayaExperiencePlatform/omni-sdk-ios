@@ -8,7 +8,6 @@ class NotificationService: UNNotificationServiceExtension {
   private let logger = Logger()
   var contentHandler: ((UNNotificationContent) -> Void)?
   var bestAttemptContent: UNMutableNotificationContent?
-  private var dataModel = DataModel()
   private let userDefaults = UserDefaults.appGroup
   private let defaultNotificationMessage = "You have an unread message"
   
@@ -32,8 +31,8 @@ class NotificationService: UNNotificationServiceExtension {
           let eventDateAny = request.content.userInfo["eventDate"],
           let eventDateString = eventDateAny as? String,
           let eventDate = Self.dateFormatter.date(from: eventDateString),
-          let tokenData = try? KeychainService(service: "com.avaya.messaging").retrieveData(forAccount: "com.avaya.messaging", accessGroup: "group.com.avaya.messaging"),
-          let tokenResponse = try? JSONDecoder().decode(TokenResponse.self, from: tokenData)
+          let tokenData = try? KeychainService(service: keychainServiceName).retrieveData(forAccount: keychainServiceName, accessGroup: groupName),
+          let sdkConfig = try? JSONDecoder().decode(SDKConfiguration.self, from: tokenData)
     else {
       localBestAttemptContent.body = defaultNotificationMessage
       contentHandler(localBestAttemptContent)
@@ -45,30 +44,33 @@ class NotificationService: UNNotificationServiceExtension {
                                           conversationId: conversationId,
                                           sessionId: sessionId)
     
-    let tokenProvider = AXPJWTProvider()
-    
+    let baseURLString = userDefaults.string(forKey: UserDefaultConstants.appBackendServerURL) ?? defaultBackendServerURL
+    guard let baseURL = URL(string: baseURLString) else {
+      return
+    }
+    let tokenProvider = TokenProvider(api: AppBackendAPI(baseURL: baseURL))
+  
     let configuration = AXPOmniSDKConfig(
-      applicationKey: tokenResponse.appKey,
-      integrationID: tokenResponse.axpIntegrationId,
+      applicationKey: sdkConfig.appKey,
+      integrationID: sdkConfig.axpIntegrationId,
       tokenProvider: tokenProvider,
-      host: "https://\(tokenResponse.axpHostName)",
-      displayName: dataModel.me.name,
-      sessionParameters: dataModel.sessionParameters,
-      pushNotificationConfigID: tokenResponse.configId
+      host: "https://\(sdkConfig.axpHostName)",
+      displayName: userDefaults.string(forKey: UserDefaultConstants.yourDisplayName) ?? "",
+      sessionParameters: [:],
+      pushNotificationConfigID: sdkConfig.configId
     )
-
-    localBestAttemptContent.title = "Messaging"
     
+    localBestAttemptContent.title = "Messaging"
     Task {
       let message = try? await AXPMessagingSDK.messageForPushNotificationPayload(
         notificationPayload: payloadData,
         configuration: configuration)
       
       localBestAttemptContent.body = message ?? defaultNotificationMessage
+      
       contentHandler(localBestAttemptContent)
     }
   }
-  
   
   override func serviceExtensionTimeWillExpire() {
     // Called just before the extension will be terminated by the system.
@@ -78,5 +80,4 @@ class NotificationService: UNNotificationServiceExtension {
       contentHandler(bestAttemptContent)
     }
   }
-  
 }

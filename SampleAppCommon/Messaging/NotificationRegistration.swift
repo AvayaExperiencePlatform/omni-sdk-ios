@@ -2,6 +2,7 @@ import Foundation
 import UserNotifications
 import UIKit
 import OSLog
+import SwiftUI
 
 struct NotificationRegistrationRequest: Codable {
   let configId: String
@@ -103,10 +104,6 @@ extension UIApplication {
     UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
     UNUserNotificationCenter.current().removeAllDeliveredNotifications()
   }
-}
-
-extension UserDefaults {
-   public static let appGroup = UserDefaults(suiteName: "group.com.avaya.messaging")!
 }
 
 func processFcmUrl(_ urlString: String) -> String? {

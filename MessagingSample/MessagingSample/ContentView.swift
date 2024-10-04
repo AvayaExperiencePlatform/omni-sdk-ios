@@ -3,6 +3,8 @@
 import SwiftUI
 import AXPMessagingUI
 
+let textFieldBackgroundColor = Color.white
+
 struct ContentView: View {
   var config = AXPMessagingSampleViewModel()
   @State private var isMessagingDisabled = true
@@ -20,6 +22,11 @@ struct ContentView: View {
           !isMessagingDisabled ? AXPMessagingUIView(configuration: config.configUI ?? AXPMessagingUIViewConfig(), conversation: dataModel.converstion!) {
           } : nil
         }
+        .navigationBarItems(trailing: NavigationLink(destination: SettingsView()) {
+          Image(systemName: "gear")
+            .imageScale(.large)
+            .padding()
+        })
         if isConnecting {
           ProgressView()
             .progressViewStyle(CircularProgressViewStyle(tint: .gray))

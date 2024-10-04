@@ -60,7 +60,7 @@ class CallModel: ObservableObject, CallDelegate {
   private var elapsedTimer : Timer? = nil
 
   @MainActor func startCall() async {
-    let baseURLString = UserDefaults.standard.string(forKey: UserDefaultConstants.appBackendServerURL) ?? "http://127.0.0.1:3000/token"
+    let baseURLString = UserDefaults.appGroup.string(forKey: UserDefaultConstants.appBackendServerURL) ?? defaultBackendServerURL
     guard let baseURL = URL(string: baseURLString) else {
       errorMessage = "Invalid app backend URL: \(baseURLString)"
       return
@@ -89,7 +89,7 @@ class CallModel: ObservableObject, CallDelegate {
           integrationID: sdkConfig.axpIntegrationId,
           tokenProvider: tokenProvider,
           host: "https://\(sdkConfig.axpHostName)",
-          displayName: "Calling Sample App User"
+          displayName: SettingsData().yourDisplayName
         )
       }
       tokenProvider?.nextToken = token
@@ -104,7 +104,8 @@ class CallModel: ObservableObject, CallDelegate {
 
     let callOptions = CallOptions(
       remoteDisplayName: remoteDisplayName,
-      remoteAddress: sdkConfig.callingRemoteAddress
+      remoteAddress: sdkConfig.callingRemoteAddress,
+      engagementParameters: SettingsData().contextParameters
     )
     let call = AXPCallingSDK.createCall(options: callOptions, delegate: self)
     self.call = call

@@ -1,0 +1,14 @@
+{
+   "_comment": "Update Simulator Target Bundle Value to Your App's Bundle Id",
+    "Simulator Target Bundle": "com.avaya.axp.omnichannel.OmniChannelSample",
+    "aps" : {
+       "mutable-content" : 1,
+       "category" : "NEW_MESSAGE_CATEGORY",
+       "alert" : {
+            "title" : "Messaging Sample",
+            "body" : "This is a test APNS message.  Drag and drop it on to the simulator"
+        },
+        "sound" : "default",
+        "badge" : 10
+   }
+}

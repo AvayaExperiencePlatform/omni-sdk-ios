@@ -1,6 +1,5 @@
 //
 //  TimerView.swift
-//  CallingSample
 //
 //
 
@@ -23,11 +22,5 @@ struct TimerView: View {
     formatter.zeroFormattingBehavior = .pad
     
     return formatter.string(from: viewModel.elapsedTime) ?? "00:00:00"
-  }
-}
-
-struct TimerView_Previews: PreviewProvider {
-  static var previews: some View {
-    TimerView(viewModel: CallModel()).background(Color.black)
   }
 }

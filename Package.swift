@@ -63,23 +63,23 @@ let package = Package(
     ),
     .binaryTarget(
       name: "AXPCore",
-      url: "https://github.com/AvayaExperiencePlatform/omni-sdk-ios/releases/download/v1.0.0/AXPCore.zip",
-      checksum: "72807c41294e815a52ca101e30cabdf02c8a6fa34d2e9474298389d958b77448"
+      url: "https://github.com/AvayaExperiencePlatform/omni-sdk-ios/releases/download/v1.1.0/AXPCore.zip",
+      checksum: "69985045526ab57a3324a0be32b395834a63e02485355401909a7f82b2218308"
     ),
     .binaryTarget(
       name: "AXPCalling",
-      url: "https://github.com/AvayaExperiencePlatform/omni-sdk-ios/releases/download/v1.0.0/AXPCalling.zip",
-      checksum: "6e51836b3512798bb3f269f8751967b5ebd7353f1ed4c9920d614d803e56b349"
+      url: "https://github.com/AvayaExperiencePlatform/omni-sdk-ios/releases/download/v1.1.0/AXPCalling.zip",
+      checksum: "1229cdec868d20203b744564b85a2ee07d64674064a1bfbab5e2f8491fbfbcaa"
     ),
     .binaryTarget(
       name: "AXPMessaging",
-      url: "https://github.com/AvayaExperiencePlatform/omni-sdk-ios/releases/download/v1.0.0/AXPMessaging.zip",
-      checksum: "14882cdb2552887424d632da9461fca7641a192ba943c287a8f616efd15c8f0d"
+      url: "https://github.com/AvayaExperiencePlatform/omni-sdk-ios/releases/download/v1.1.0/AXPMessaging.zip",
+      checksum: "de3ea9777d22ee55ab5ccd1f10194c6ec7932b557706984050d754d02825d930"
     ),
     .binaryTarget(
       name: "AXPMessagingUI",
-      url: "https://github.com/AvayaExperiencePlatform/omni-sdk-ios/releases/download/v1.0.0/AXPMessagingUI.zip",
-      checksum: "ee217c3a785336f9cbedd8cf84926df962b92cdd0e2b625f3e56f53ed993ec46"
+      url: "https://github.com/AvayaExperiencePlatform/omni-sdk-ios/releases/download/v1.1.0/AXPMessagingUI.zip",
+      checksum: "ae777ea88b55d8e0dfc6b3ed02c9123f04bfc8827a3c29430df0f852c2d2172e"
     )
   ]
 )

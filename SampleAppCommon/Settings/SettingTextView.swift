@@ -1,6 +1,6 @@
 //
 //  SettingTextView.swift
-//  CallingSample
+//  
 //
 //
 import SwiftUI
@@ -27,13 +27,20 @@ struct ClearableTextField: View {
   @Binding var text: String
   var body: some View {
     HStack {
-      TextField("", text: $text)
-        .textFieldStyle(PlainTextFieldStyle())
+      if #available(iOS 16.0, *) {
+        TextField("", text: $text)
+          .textFieldStyle(PlainTextFieldStyle())
+          .tint(.primary)
+      } else {
+        // Fallback on earlier versions
+        TextField("", text: $text)
+          .textFieldStyle(PlainTextFieldStyle())
+      }
       Button(action: {
         self.text = ""
       }) {
         Image(systemName: "xmark")
-          .foregroundColor(.gray)
+          .foregroundColor(.primary)
       }
     }
   }

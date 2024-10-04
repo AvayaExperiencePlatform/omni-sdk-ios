@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C99549B62B59BE8F00B26BA0 /* AudioRouteMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99549B52B59BE8F00B26BA0 /* AudioRouteMonitor.swift */; };
+		822EA2E02C5D9859007F5411 /* SettingsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822EA2DF2C5D9859007F5411 /* SettingsConstants.swift */; };
+		82CE16FD2C5843EE008C3560 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CE16FA2C5843EE008C3560 /* SettingsView.swift */; };
+		82CE16FE2C5843EE008C3560 /* SettingTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CE16FB2C5843EE008C3560 /* SettingTextView.swift */; };
+		82CE16FF2C5843EE008C3560 /* SettingsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CE16FC2C5843EE008C3560 /* SettingsData.swift */; };
 		C9A8C0862B5011C600A8D089 /* CallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A8C0852B5011C600A8D089 /* CallModel.swift */; };
-		C9BC4DE62BBFCC1900169F06 /* AppBackendAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BC4DE52BBFCC1900169F06 /* AppBackendAPI.swift */; };
-		C9C4EEF52BAB3DBA00C19035 /* TokenProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C4EEF42BAB3DBA00C19035 /* TokenProvider.swift */; };
-		FE5E5B242B45D681000FFAE0 /* KeypadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5E5B232B45D681000FFAE0 /* KeypadView.swift */; };
+		FE03C2772C52EACB000F9390 /* TokenProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE03C2752C52EACB000F9390 /* TokenProvider.swift */; };
+		FE03C2782C52EACB000F9390 /* AppBackendAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE03C2762C52EACB000F9390 /* AppBackendAPI.swift */; };
+		FE52ABDD2C63B91B00EB7979 /* KeypadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE52ABDA2C63B91B00EB7979 /* KeypadView.swift */; };
+		FE52ABDE2C63B91B00EB7979 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE52ABDB2C63B91B00EB7979 /* TimerView.swift */; };
+		FE52ABDF2C63B91B00EB7979 /* AudioRouteMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE52ABDC2C63B91B00EB7979 /* AudioRouteMonitor.swift */; };
 		FE6355532B23782300A341A5 /* CallingSampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6355522B23782300A341A5 /* CallingSampleApp.swift */; };
 		FE6355552B23782300A341A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6355542B23782300A341A5 /* ContentView.swift */; };
 		FE6355572B23782400A341A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE6355562B23782400A341A5 /* Assets.xcassets */; };
@@ -19,29 +24,29 @@
 		FE6355612B2378D500A341A5 /* ActiveCallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6355602B2378D500A341A5 /* ActiveCallView.swift */; };
 		FE6355682B237BEB00A341A5 /* AXPCore in Frameworks */ = {isa = PBXBuildFile; productRef = FE6355672B237BEB00A341A5 /* AXPCore */; };
 		FE63556C2B237BEB00A341A5 /* AXPCalling in Frameworks */ = {isa = PBXBuildFile; productRef = FE63556B2B237BEB00A341A5 /* AXPCalling */; };
-		FE6355762B23BFD200A341A5 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6355752B23BFD200A341A5 /* TimerView.swift */; };
 		FE7E6C7A2BF65AC6007C69E9 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = FE7E6C792BF65AC6007C69E9 /* Localizable.xcstrings */; };
-		FEF12F6B2B585B49004C2788 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF12F6A2B585B49004C2788 /* SettingsView.swift */; };
-		FEF12F6D2B585B7C004C2788 /* SettingTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF12F6C2B585B7C004C2788 /* SettingTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C99549B52B59BE8F00B26BA0 /* AudioRouteMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRouteMonitor.swift; sourceTree = "<group>"; };
+		822EA2DF2C5D9859007F5411 /* SettingsConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsConstants.swift; path = ../../SampleAppCommon/Settings/SettingsConstants.swift; sourceTree = "<group>"; };
+		82CE16FA2C5843EE008C3560 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsView.swift; path = ../../SampleAppCommon/Settings/SettingsView.swift; sourceTree = "<group>"; };
+		82CE16FB2C5843EE008C3560 /* SettingTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingTextView.swift; path = ../../SampleAppCommon/Settings/SettingTextView.swift; sourceTree = "<group>"; };
+		82CE16FC2C5843EE008C3560 /* SettingsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsData.swift; path = ../../SampleAppCommon/Settings/SettingsData.swift; sourceTree = "<group>"; };
 		C9A8C0852B5011C600A8D089 /* CallModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallModel.swift; sourceTree = "<group>"; };
-		C9BC4DE52BBFCC1900169F06 /* AppBackendAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBackendAPI.swift; sourceTree = "<group>"; };
-		C9C4EEF42BAB3DBA00C19035 /* TokenProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenProvider.swift; sourceTree = "<group>"; };
-		FE5E5B232B45D681000FFAE0 /* KeypadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeypadView.swift; sourceTree = "<group>"; };
+		FE03C2752C52EACB000F9390 /* TokenProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TokenProvider.swift; path = ../../SampleAppCommon/Backend/TokenProvider.swift; sourceTree = "<group>"; };
+		FE03C2762C52EACB000F9390 /* AppBackendAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppBackendAPI.swift; path = ../../SampleAppCommon/Backend/AppBackendAPI.swift; sourceTree = "<group>"; };
+		FE52ABDA2C63B91B00EB7979 /* KeypadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeypadView.swift; path = ../../SampleAppCommon/Calling/KeypadView.swift; sourceTree = "<group>"; };
+		FE52ABDB2C63B91B00EB7979 /* TimerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimerView.swift; path = ../../SampleAppCommon/Calling/TimerView.swift; sourceTree = "<group>"; };
+		FE52ABDC2C63B91B00EB7979 /* AudioRouteMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioRouteMonitor.swift; path = ../../SampleAppCommon/Calling/AudioRouteMonitor.swift; sourceTree = "<group>"; };
+		FE52ABE82C666C0F00EB7979 /* CallingSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CallingSample.entitlements; sourceTree = "<group>"; };
 		FE63554F2B23782300A341A5 /* Calling Sample App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Calling Sample App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE6355522B23782300A341A5 /* CallingSampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallingSampleApp.swift; sourceTree = "<group>"; };
 		FE6355542B23782300A341A5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FE6355562B23782400A341A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE6355592B23782400A341A5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FE6355602B2378D500A341A5 /* ActiveCallView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveCallView.swift; sourceTree = "<group>"; };
-		FE6355752B23BFD200A341A5 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		FE6355792B276E9900A341A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		FE7E6C792BF65AC6007C69E9 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
-		FEF12F6A2B585B49004C2788 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		FEF12F6C2B585B7C004C2788 /* SettingTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +68,10 @@
 				FE6355512B23782300A341A5 /* CallingSample */,
 				FE6355502B23782300A341A5 /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
+			usesTabs = 0;
 		};
 		FE6355502B23782300A341A5 /* Products */ = {
 			isa = PBXGroup;
@@ -76,21 +84,24 @@
 		FE6355512B23782300A341A5 /* CallingSample */ = {
 			isa = PBXGroup;
 			children = (
-				FE6355792B276E9900A341A5 /* Info.plist */,
 				FE6355602B2378D500A341A5 /* ActiveCallView.swift */,
-				C9BC4DE52BBFCC1900169F06 /* AppBackendAPI.swift */,
-				C99549B52B59BE8F00B26BA0 /* AudioRouteMonitor.swift */,
-				C9A8C0852B5011C600A8D089 /* CallModel.swift */,
-				FE6355522B23782300A341A5 /* CallingSampleApp.swift */,
-				FE6355542B23782300A341A5 /* ContentView.swift */,
-				FE5E5B232B45D681000FFAE0 /* KeypadView.swift */,
-				FEF12F6A2B585B49004C2788 /* SettingsView.swift */,
-				FEF12F6C2B585B7C004C2788 /* SettingTextView.swift */,
-				FE6355752B23BFD200A341A5 /* TimerView.swift */,
-				C9C4EEF42BAB3DBA00C19035 /* TokenProvider.swift */,
+				FE03C2762C52EACB000F9390 /* AppBackendAPI.swift */,
 				FE6355562B23782400A341A5 /* Assets.xcassets */,
+				FE52ABDC2C63B91B00EB7979 /* AudioRouteMonitor.swift */,
+				FE52ABE82C666C0F00EB7979 /* CallingSample.entitlements */,
+				FE6355522B23782300A341A5 /* CallingSampleApp.swift */,
+				C9A8C0852B5011C600A8D089 /* CallModel.swift */,
+				FE6355542B23782300A341A5 /* ContentView.swift */,
+				FE6355792B276E9900A341A5 /* Info.plist */,
+				FE52ABDA2C63B91B00EB7979 /* KeypadView.swift */,
 				FE7E6C782BF65A98007C69E9 /* Localization */,
 				FE6355582B23782400A341A5 /* Preview Content */,
+				822EA2DF2C5D9859007F5411 /* SettingsConstants.swift */,
+				82CE16FC2C5843EE008C3560 /* SettingsData.swift */,
+				82CE16FA2C5843EE008C3560 /* SettingsView.swift */,
+				82CE16FB2C5843EE008C3560 /* SettingTextView.swift */,
+				FE52ABDB2C63B91B00EB7979 /* TimerView.swift */,
+				FE03C2752C52EACB000F9390 /* TokenProvider.swift */,
 			);
 			path = CallingSample;
 			sourceTree = "<group>";
@@ -191,16 +202,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C99549B62B59BE8F00B26BA0 /* AudioRouteMonitor.swift in Sources */,
-				C9BC4DE62BBFCC1900169F06 /* AppBackendAPI.swift in Sources */,
-				FE6355762B23BFD200A341A5 /* TimerView.swift in Sources */,
-				FEF12F6B2B585B49004C2788 /* SettingsView.swift in Sources */,
+				FE03C2772C52EACB000F9390 /* TokenProvider.swift in Sources */,
 				FE6355612B2378D500A341A5 /* ActiveCallView.swift in Sources */,
-				FE5E5B242B45D681000FFAE0 /* KeypadView.swift in Sources */,
+				FE52ABDD2C63B91B00EB7979 /* KeypadView.swift in Sources */,
+				FE52ABDF2C63B91B00EB7979 /* AudioRouteMonitor.swift in Sources */,
+				82CE16FF2C5843EE008C3560 /* SettingsData.swift in Sources */,
+				822EA2E02C5D9859007F5411 /* SettingsConstants.swift in Sources */,
+				82CE16FE2C5843EE008C3560 /* SettingTextView.swift in Sources */,
+				FE52ABDE2C63B91B00EB7979 /* TimerView.swift in Sources */,
+				82CE16FD2C5843EE008C3560 /* SettingsView.swift in Sources */,
 				FE6355552B23782300A341A5 /* ContentView.swift in Sources */,
 				FE6355532B23782300A341A5 /* CallingSampleApp.swift in Sources */,
-				FEF12F6D2B585B7C004C2788 /* SettingTextView.swift in Sources */,
-				C9C4EEF52BAB3DBA00C19035 /* TokenProvider.swift in Sources */,
+				FE03C2782C52EACB000F9390 /* AppBackendAPI.swift in Sources */,
 				C9A8C0862B5011C600A8D089 /* CallModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,6 +345,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CallingSample/CallingSample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CallingSample/Preview Content\"";
@@ -352,7 +366,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.avaya.axp.omni.CallingSample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.avaya.axp.omni.CallingSampleApp;
 				PRODUCT_NAME = "Calling Sample App";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -365,6 +379,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CallingSample/CallingSample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CallingSample/Preview Content\"";
@@ -385,7 +400,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.avaya.axp.omni.CallingSample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.avaya.axp.omni.CallingSampleApp;
 				PRODUCT_NAME = "Calling Sample App";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

@@ -4,6 +4,16 @@
     "" : {
 
     },
+    "Add Key/Value Pair" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "添加键值对"
+          }
+        }
+      }
+    },
     "Audio" : {
       "localizations" : {
         "fr" : {
@@ -68,6 +78,16 @@
         }
       }
     },
+    "ContextParameters" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "上下文参数"
+          }
+        }
+      }
+    },
     "End" : {
       "localizations" : {
         "fr" : {
@@ -96,6 +116,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "通用"
+          }
+        }
+      }
+    },
+    "Key" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "键"
           }
         }
       }
@@ -238,6 +268,60 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "设置"
+          }
+        }
+      }
+    },
+    "Show Typing Indicator" : {
+
+    },
+    "Show Typing Participant Avatar" : {
+
+    },
+    "Show Typing Participant Name" : {
+
+    },
+    "Typing Indicator Settings" : {
+
+    },
+    "User Identifier" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "User Identifier"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "用户标识"
+          }
+        }
+      }
+    },
+    "Value" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "值"
+          }
+        }
+      }
+    },
+    "Verified User" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verified User"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已确认用户"
           }
         }
       }

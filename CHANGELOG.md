@@ -1,3 +1,19 @@
+## 1.0.1
+
+Released October 4, 2024
+
+- Added typing notification support
+- Updated the appearance of the AXPMessagingUI chat view
+- Added configuration options to customize the colors and fonts used by AXPMessagingUI chat view
+- Display URLs using link previews when the message contains only a URL or a URL is at the end of a message
+- Automatically dismiss keyboard when the use scrolls towards the bottom of the chat view
+- Set up the messaging sample app for push notifications when supplied with Firebase configuration
+- Fixed rendering and input of messages with newline characters
+- Fixed grouping and display of date headers
+- Fixed scroll-to-end behavior
+- Fixed inconsistent appearance of the scroll-to-end floating action button
+- Fixed building with Xcode 15.2
+
 ## 1.0.0
 
 Released July 22, 2024

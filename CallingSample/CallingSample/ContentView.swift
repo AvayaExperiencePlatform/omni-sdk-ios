@@ -6,6 +6,8 @@
 import SwiftUI
 import AVFoundation
 
+let textFieldBackgroundColor = Color.white
+
 struct ContentView: View {
   //Setting
   @State private var isShowingSettingView = false
