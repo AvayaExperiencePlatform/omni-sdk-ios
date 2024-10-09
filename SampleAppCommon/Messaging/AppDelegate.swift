@@ -8,31 +8,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
   private let logger = Logger()
   
-  func application(_ application: UIApplication,
-                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-
-    // To test push notifications, add a GoogleService-Info.plist for your
-    // Firebase project and uncomment the code below.
-
-    /*FirebaseApp.configure()
-
-    // Register for remote notifications
-    UNUserNotificationCenter.current().delegate = self
-    UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
-      self.logger.debug("Permission granted: \(granted)")
-      
-      if granted {
-        DispatchQueue.main.async {
-          self.logger.debug("application.registerForRemoteNotifications");
-          UIApplication.shared.registerForRemoteNotifications()
-        }
-      }
-    }
-    application.registerForRemoteNotifications()
-    Messaging.messaging().delegate = self*/
-
-    return true
-  }
+//  func application(_ application: UIApplication,
+//                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+//
+//    FirebaseApp.configure()
+//
+//    // Register for remote notifications
+//    UNUserNotificationCenter.current().delegate = self
+//    UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
+//      self.logger.debug("Permission granted: \(granted)")
+//      
+//      if granted {
+//        DispatchQueue.main.async {
+//          self.logger.debug("application.registerForRemoteNotifications");
+//          UIApplication.shared.registerForRemoteNotifications()
+//        }
+//      }
+//    }
+//    application.registerForRemoteNotifications()
+//    Messaging.messaging().delegate = self
+//
+//    return true
+//  }
 
   // MARK: - UNUserNotificationCenterDelegate
 
@@ -51,23 +48,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
   // MARK: - MessagingDelegate
   
-  func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
-    logger.debug("Firebase registration token: \(String(describing: fcmToken))")
-    
-    let keychainService = KeychainService(service: keychainServiceName,
-                                          accessGroup: groupName)
-    
-    if let fcmToken = fcmToken, let tokenData = fcmToken.data(using: .utf8) {
-      do {
-        try keychainService.setData(tokenData,
-                                    accessibility: .whenUnlocked,
-                                    forService: keychainServiceName,
-                                    account: "FCMToken")
-      } catch {
-        logger.debug("Failed to set FCM token in keychain: \(error)")
-      }
-    }
-  }
+//  func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
+//    logger.debug("Firebase registration token: \(String(describing: fcmToken))")
+//    
+//    let keychainService = KeychainService(service: keychainServiceName,
+//                                          accessGroup: groupName)
+//    
+//    if let fcmToken = fcmToken, let tokenData = fcmToken.data(using: .utf8) {
+//      do {
+//        try keychainService.setData(tokenData,
+//                                    accessibility: .whenUnlocked,
+//                                    forService: keychainServiceName,
+//                                    account: "FCMToken")
+//      } catch {
+//        logger.debug("Failed to set FCM token in keychain: \(error)")
+//      }
+//    }
+//  }
   
   func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data
   ) {

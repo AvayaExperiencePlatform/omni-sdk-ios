@@ -39,11 +39,6 @@
 		B9CCD8582C36F44000711EE0 /* KeychainServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A233792C36EE7B001FF780 /* KeychainServices.swift */; };
 		B9CCD85A2C36F4C000711EE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CCD8592C36F4C000711EE0 /* AppDelegate.swift */; };
 		B9CCD85D2C36F59A00711EE0 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = B9CCD85C2C36F59A00711EE0 /* FirebaseMessaging */; };
-		C91A6D0F2C4EC19F00125128 /* AXPMessagingUI in Frameworks */ = {isa = PBXBuildFile; productRef = C91A6D0E2C4EC19F00125128 /* AXPMessagingUI */; };
-		C91A6D112C4EC1AC00125128 /* AXPCore in Frameworks */ = {isa = PBXBuildFile; productRef = C91A6D102C4EC1AC00125128 /* AXPCore */; };
-		C91A6D132C4EC1AC00125128 /* AXPMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = C91A6D122C4EC1AC00125128 /* AXPMessaging */; };
-		C91A6D152C4EC1DE00125128 /* AXPMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = C91A6D142C4EC1DE00125128 /* AXPMessaging */; };
-		C91A6D172C4EC1E500125128 /* AXPCore in Frameworks */ = {isa = PBXBuildFile; productRef = C91A6D162C4EC1E500125128 /* AXPCore */; };
 		FE145EF92C6E7ABC00A809F5 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE145EF82C6E7ABC00A809F5 /* AppConstants.swift */; };
 		FE145EFA2C6E7ABC00A809F5 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE145EF82C6E7ABC00A809F5 /* AppConstants.swift */; };
 /* End PBXBuildFile section */
@@ -59,6 +54,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		B9A233572C36E897001FF780 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B9A233632C36E9C8001FF780 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -68,6 +73,16 @@
 				B9A233642C36E9C8001FF780 /* RemoteNotificationService.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9A2336E2C36E9E4001FF780 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -108,9 +123,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9CCD85D2C36F59A00711EE0 /* FirebaseMessaging in Frameworks */,
-				C91A6D172C4EC1E500125128 /* AXPCore in Frameworks */,
-				C91A6D0F2C4EC19F00125128 /* AXPMessagingUI in Frameworks */,
-				C91A6D152C4EC1DE00125128 /* AXPMessaging in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,8 +130,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C91A6D112C4EC1AC00125128 /* AXPCore in Frameworks */,
-				C91A6D132C4EC1AC00125128 /* AXPMessaging in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +164,7 @@
 				B9158CAB2BF0F51300C2B3D2 /* MessagingSample */,
 				B9A2335D2C36E9C8001FF780 /* RemoteNotificationService */,
 				B9158CAA2BF0F51300C2B3D2 /* Products */,
+				B9158CE12BF14EC700C2B3D2 /* Frameworks */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -201,6 +212,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		B9158CE12BF14EC700C2B3D2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B9A2335D2C36E9C8001FF780 /* RemoteNotificationService */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +240,7 @@
 				B9158CA52BF0F51300C2B3D2 /* Sources */,
 				B9158CA62BF0F51300C2B3D2 /* Frameworks */,
 				B9158CA72BF0F51300C2B3D2 /* Resources */,
+				B9A233572C36E897001FF780 /* Embed Frameworks */,
 				B9A233632C36E9C8001FF780 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
@@ -232,9 +251,6 @@
 			name = MessagingSample;
 			packageProductDependencies = (
 				B9CCD85C2C36F59A00711EE0 /* FirebaseMessaging */,
-				C91A6D0E2C4EC19F00125128 /* AXPMessagingUI */,
-				C91A6D142C4EC1DE00125128 /* AXPMessaging */,
-				C91A6D162C4EC1E500125128 /* AXPCore */,
 			);
 			productName = MessagingSample;
 			productReference = B9158CA92BF0F51300C2B3D2 /* MessagingSample.app */;
@@ -247,16 +263,16 @@
 				B9A233582C36E9C8001FF780 /* Sources */,
 				B9A233592C36E9C8001FF780 /* Frameworks */,
 				B9A2335A2C36E9C8001FF780 /* Resources */,
+				B9A2336E2C36E9E4001FF780 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FE8E58AA2CB6D5F10091C853 /* PBXTargetDependency */,
+				FE8E58A82CB6D5DF0091C853 /* PBXTargetDependency */,
+				FE8E58A62CB6D5BD0091C853 /* PBXTargetDependency */,
 			);
 			name = RemoteNotificationService;
-			packageProductDependencies = (
-				C91A6D102C4EC1AC00125128 /* AXPCore */,
-				C91A6D122C4EC1AC00125128 /* AXPMessaging */,
-			);
 			productName = RemoteNotificationService;
 			productReference = B9A2335C2C36E9C8001FF780 /* RemoteNotificationService.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -287,7 +303,7 @@
 			mainGroup = B9158CA02BF0F51300C2B3D2;
 			packageReferences = (
 				B9CCD85B2C36F59A00711EE0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				C91A6D0D2C4EC19F00125128 /* XCLocalSwiftPackageReference "../" */,
+				FE8CF4712CB6D40900DCAD79 /* XCLocalSwiftPackageReference "../../omni-sdk-ios" */,
 			);
 			productRefGroup = B9158CAA2BF0F51300C2B3D2 /* Products */;
 			projectDirPath = "";
@@ -370,6 +386,18 @@
 			isa = PBXTargetDependency;
 			target = B9A2335B2C36E9C8001FF780 /* RemoteNotificationService */;
 			targetProxy = B9A233612C36E9C8001FF780 /* PBXContainerItemProxy */;
+		};
+		FE8E58A62CB6D5BD0091C853 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = FE8E58A52CB6D5BD0091C853 /* AXPCore */;
+		};
+		FE8E58A82CB6D5DF0091C853 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = FE8E58A72CB6D5DF0091C853 /* AXPMessaging */;
+		};
+		FE8E58AA2CB6D5F10091C853 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = FE8E58A92CB6D5F10091C853 /* AXPMessagingUI */;
 		};
 /* End PBXTargetDependency section */
 
@@ -650,9 +678,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		C91A6D0D2C4EC19F00125128 /* XCLocalSwiftPackageReference "../" */ = {
+		FE8CF4712CB6D40900DCAD79 /* XCLocalSwiftPackageReference "../../omni-sdk-ios" */ = {
 			isa = XCLocalSwiftPackageReference;
-			relativePath = ../;
+			relativePath = "../../omni-sdk-ios";
 		};
 /* End XCLocalSwiftPackageReference section */
 
@@ -673,29 +701,20 @@
 			package = B9CCD85B2C36F59A00711EE0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseMessaging;
 		};
-		C91A6D0E2C4EC19F00125128 /* AXPMessagingUI */ = {
+		FE8E58A52CB6D5BD0091C853 /* AXPCore */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = FE8CF4712CB6D40900DCAD79 /* XCLocalSwiftPackageReference "../../omni-sdk-ios" */;
+			productName = AXPCore;
+		};
+		FE8E58A72CB6D5DF0091C853 /* AXPMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FE8CF4712CB6D40900DCAD79 /* XCLocalSwiftPackageReference "../../omni-sdk-ios" */;
+			productName = AXPMessaging;
+		};
+		FE8E58A92CB6D5F10091C853 /* AXPMessagingUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FE8CF4712CB6D40900DCAD79 /* XCLocalSwiftPackageReference "../../omni-sdk-ios" */;
 			productName = AXPMessagingUI;
-		};
-		C91A6D102C4EC1AC00125128 /* AXPCore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C91A6D0D2C4EC19F00125128 /* XCLocalSwiftPackageReference "../" */;
-			productName = AXPCore;
-		};
-		C91A6D122C4EC1AC00125128 /* AXPMessaging */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C91A6D0D2C4EC19F00125128 /* XCLocalSwiftPackageReference "../" */;
-			productName = AXPMessaging;
-		};
-		C91A6D142C4EC1DE00125128 /* AXPMessaging */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C91A6D0D2C4EC19F00125128 /* XCLocalSwiftPackageReference "../" */;
-			productName = AXPMessaging;
-		};
-		C91A6D162C4EC1E500125128 /* AXPCore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C91A6D0D2C4EC19F00125128 /* XCLocalSwiftPackageReference "../" */;
-			productName = AXPCore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
