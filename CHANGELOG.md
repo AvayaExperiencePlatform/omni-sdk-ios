@@ -1,3 +1,7 @@
+## 1.1.1
+Released October 9, 2024
+- Fixed Typing Notification not sent from customer to agent.
+
 ## 1.1.0
 
 Released October 4, 2024

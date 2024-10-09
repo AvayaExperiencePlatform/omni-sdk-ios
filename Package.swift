@@ -27,9 +27,12 @@ let package = Package(
   dependencies: [
     .package(url: "https://github.com/apple/swift-openapi-runtime", .upToNextMinor(from: "1.4.0")),
     .package(url: "https://github.com/apple/swift-openapi-urlsession", .upToNextMinor(from: "1.0.0")),
+    .package(url: "https://github.com/CoreOffice/XMLCoder", .upToNextMajor(from: "0.17.0")),
+    .package(url: "https://github.com/daltoniam/Starscream", exact: "4.0.4"),
     .package(url: "https://github.com/elegantchaos/DictionaryCoding", .upToNextMajor(from: "1.0.9")),
     .package(url: "https://github.com/stasel/WebRTC", .upToNextMajor(from: "120.0.0")),
     .package(url: "https://github.com/Thomvis/BrightFutures", .upToNextMajor(from: "8.0.0")),
+    .package(url: "https://github.com/yahoojapan/SwiftyXMLParser", .upToNextMajor(from: "5.0.0")),
   ],
   targets: [
     .target(
@@ -47,7 +50,9 @@ let package = Package(
         "AXPCore",
         "BrightFutures",
         "DictionaryCoding",
+        "SwiftyXMLParser",
         "WebRTC",
+        "XMLCoder",
         .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
         .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession")
       ]
@@ -63,23 +68,23 @@ let package = Package(
     ),
     .binaryTarget(
       name: "AXPCore",
-      url: "https://github.com/AvayaExperiencePlatform/omni-sdk-ios/releases/download/v1.1.0/AXPCore.zip",
-      checksum: "69985045526ab57a3324a0be32b395834a63e02485355401909a7f82b2218308"
+      url: "https://github.com/AvayaExperiencePlatform/omni-sdk-ios/releases/download/v1.1.1/AXPCore.zip",
+      checksum: "68f3ead4696012bef5a43125c8aa5cd7d4fcf460d512f0453f85e8880aba715a"
     ),
     .binaryTarget(
       name: "AXPCalling",
-      url: "https://github.com/AvayaExperiencePlatform/omni-sdk-ios/releases/download/v1.1.0/AXPCalling.zip",
-      checksum: "1229cdec868d20203b744564b85a2ee07d64674064a1bfbab5e2f8491fbfbcaa"
+      url: "https://github.com/AvayaExperiencePlatform/omni-sdk-ios/releases/download/v1.1.1/AXPCalling.zip",
+      checksum: "5ff6ab690daf97a6a7c722ed9e17cdae5eb0b856718f2ca6a27173785506a784"
     ),
     .binaryTarget(
       name: "AXPMessaging",
-      url: "https://github.com/AvayaExperiencePlatform/omni-sdk-ios/releases/download/v1.1.0/AXPMessaging.zip",
-      checksum: "de3ea9777d22ee55ab5ccd1f10194c6ec7932b557706984050d754d02825d930"
+      url: "https://github.com/AvayaExperiencePlatform/omni-sdk-ios/releases/download/v1.1.1/AXPMessaging.zip",
+      checksum: "6921731a764255525d56e7ba68e28cbf00f7780b4ba54c3d4132e0b4d157d273"
     ),
     .binaryTarget(
       name: "AXPMessagingUI",
-      url: "https://github.com/AvayaExperiencePlatform/omni-sdk-ios/releases/download/v1.1.0/AXPMessagingUI.zip",
-      checksum: "ae777ea88b55d8e0dfc6b3ed02c9123f04bfc8827a3c29430df0f852c2d2172e"
+      url: "https://github.com/AvayaExperiencePlatform/omni-sdk-ios/releases/download/v1.1.1/AXPMessagingUI.zip",
+      checksum: "20bf839fc5c2c02553f26887b13624b64e517eb9fdbe4c5c6fc68d398a974466"
     )
   ]
 )
