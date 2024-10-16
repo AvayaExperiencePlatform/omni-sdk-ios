@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,7 +11,6 @@
 		82CE16FD2C5843EE008C3560 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CE16FA2C5843EE008C3560 /* SettingsView.swift */; };
 		82CE16FE2C5843EE008C3560 /* SettingTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CE16FB2C5843EE008C3560 /* SettingTextView.swift */; };
 		82CE16FF2C5843EE008C3560 /* SettingsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CE16FC2C5843EE008C3560 /* SettingsData.swift */; };
-		C98535D42C1C49EB00D4998A /* WebRTC in Frameworks */ = {isa = PBXBuildFile; productRef = C98535D32C1C49EB00D4998A /* WebRTC */; };
 		C9A8C0862B5011C600A8D089 /* CallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A8C0852B5011C600A8D089 /* CallModel.swift */; };
 		FE03C2772C52EACB000F9390 /* TokenProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE03C2752C52EACB000F9390 /* TokenProvider.swift */; };
 		FE03C2782C52EACB000F9390 /* AppBackendAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE03C2762C52EACB000F9390 /* AppBackendAPI.swift */; };
@@ -23,21 +22,10 @@
 		FE6355572B23782400A341A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE6355562B23782400A341A5 /* Assets.xcassets */; };
 		FE63555A2B23782400A341A5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE6355592B23782400A341A5 /* Preview Assets.xcassets */; };
 		FE6355612B2378D500A341A5 /* ActiveCallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6355602B2378D500A341A5 /* ActiveCallView.swift */; };
+		FE6355682B237BEB00A341A5 /* AXPCore in Frameworks */ = {isa = PBXBuildFile; productRef = FE6355672B237BEB00A341A5 /* AXPCore */; };
+		FE63556C2B237BEB00A341A5 /* AXPCalling in Frameworks */ = {isa = PBXBuildFile; productRef = FE63556B2B237BEB00A341A5 /* AXPCalling */; };
 		FE7E6C7A2BF65AC6007C69E9 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = FE7E6C792BF65AC6007C69E9 /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		C98535B62C1C41B400D4998A /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		822EA2DF2C5D9859007F5411 /* SettingsConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsConstants.swift; path = ../../SampleAppCommon/Settings/SettingsConstants.swift; sourceTree = "<group>"; };
@@ -66,26 +54,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C98535D42C1C49EB00D4998A /* WebRTC in Frameworks */,
+				FE63556C2B237BEB00A341A5 /* AXPCalling in Frameworks */,
+				FE6355682B237BEB00A341A5 /* AXPCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C98535B22C1C41B400D4998A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		FE6355462B23782300A341A5 = {
 			isa = PBXGroup;
 			children = (
 				FE6355512B23782300A341A5 /* CallingSample */,
 				FE6355502B23782300A341A5 /* Products */,
-				C98535B22C1C41B400D4998A /* Frameworks */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -151,18 +132,15 @@
 				FE63554B2B23782300A341A5 /* Sources */,
 				FE63554C2B23782300A341A5 /* Frameworks */,
 				FE63554D2B23782300A341A5 /* Resources */,
-				C98535B62C1C41B400D4998A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				FE8E58AF2CB6D77C0091C853 /* PBXTargetDependency */,
-				FE8E58B12CB6D77C0091C853 /* PBXTargetDependency */,
-				FE8E58AD2CB6D6FE0091C853 /* PBXTargetDependency */,
 			);
 			name = CallingSample;
 			packageProductDependencies = (
-				C98535D32C1C49EB00D4998A /* WebRTC */,
+				FE6355672B237BEB00A341A5 /* AXPCore */,
+				FE63556B2B237BEB00A341A5 /* AXPCalling */,
 			);
 			productName = CallingSample;
 			productReference = FE63554F2B23782300A341A5 /* Calling Sample App.app */;
@@ -195,8 +173,7 @@
 			);
 			mainGroup = FE6355462B23782300A341A5;
 			packageReferences = (
-				C98535D22C1C49EB00D4998A /* XCRemoteSwiftPackageReference "WebRTC" */,
-				FE8E58AB2CB6D6EB0091C853 /* XCLocalSwiftPackageReference "../../omni-sdk-ios" */,
+				FE6355662B237BEB00A341A5 /* XCLocalSwiftPackageReference "../" */,
 			);
 			productRefGroup = FE6355502B23782300A341A5 /* Products */;
 			projectDirPath = "";
@@ -242,21 +219,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		FE8E58AD2CB6D6FE0091C853 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = FE8E58AC2CB6D6FE0091C853 /* WebRTC */;
-		};
-		FE8E58AF2CB6D77C0091C853 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = FE8E58AE2CB6D77C0091C853 /* AXPCalling */;
-		};
-		FE8E58B12CB6D77C0091C853 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = FE8E58B02CB6D77C0091C853 /* AXPCore */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		FE63555B2B23782400A341A5 /* Debug */ = {
@@ -470,43 +432,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		FE8E58AB2CB6D6EB0091C853 /* XCLocalSwiftPackageReference "../../omni-sdk-ios" */ = {
+		FE6355662B237BEB00A341A5 /* XCLocalSwiftPackageReference "../" */ = {
 			isa = XCLocalSwiftPackageReference;
-			relativePath = "../../omni-sdk-ios";
+			relativePath = ../;
 		};
 /* End XCLocalSwiftPackageReference section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		C98535D22C1C49EB00D4998A /* XCRemoteSwiftPackageReference "WebRTC" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/stasel/WebRTC";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 120.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
-		C98535D32C1C49EB00D4998A /* WebRTC */ = {
+		FE6355672B237BEB00A341A5 /* AXPCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C98535D22C1C49EB00D4998A /* XCRemoteSwiftPackageReference "WebRTC" */;
-			productName = WebRTC;
-		};
-		FE8E58AC2CB6D6FE0091C853 /* WebRTC */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C98535D22C1C49EB00D4998A /* XCRemoteSwiftPackageReference "WebRTC" */;
-			productName = WebRTC;
-		};
-		FE8E58AE2CB6D77C0091C853 /* AXPCalling */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FE8E58AB2CB6D6EB0091C853 /* XCLocalSwiftPackageReference "../../omni-sdk-ios" */;
-			productName = AXPCalling;
-		};
-		FE8E58B02CB6D77C0091C853 /* AXPCore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FE8E58AB2CB6D6EB0091C853 /* XCLocalSwiftPackageReference "../../omni-sdk-ios" */;
 			productName = AXPCore;
+		};
+		FE63556B2B237BEB00A341A5 /* AXPCalling */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AXPCalling;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
